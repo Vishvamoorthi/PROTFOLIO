@@ -956,12 +956,14 @@ export default function Portfolio() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/VM_CVprintAPR.pdf";
-    link.download = "VishvaMoorthi_Resume.pdf";
-    link.click();
-  };
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = `${import.meta.env.BASE_URL}VM_CVprintAPR.pdf`; // ← use this
+  link.download = "VishvaMoorthi_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <>
