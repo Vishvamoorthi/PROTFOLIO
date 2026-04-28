@@ -958,7 +958,7 @@ export default function Portfolio() {
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = `${import.meta.env.BASE_URL}VM_CVprintAPR.pdf`; // ← use this
+  link.href = "/PORTFOLIO/VM_CVprintAPR.pdf";  // ← use this
   link.download = "VishvaMoorthi_Resume.pdf";
   document.body.appendChild(link);
   link.click();
