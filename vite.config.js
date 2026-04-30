@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 
-export default {
-  base: '/PORTFOLIO/'
-}
+export default defineConfig({
+  plugins: [react()],
+  base: '/PORTFOLIO/',   // ← this MUST be here
+})
